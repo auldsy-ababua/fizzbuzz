@@ -1,11 +1,18 @@
-for (var i = 1; i < 101; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
+var input = Number(prompt("Please input a number between 1 and 100."));
+if (isNaN(input)) {
+    alert("Please input a whole number.")
+};
+if (input < 1 || input > 100 || input % 1 != 0) {
+    alert("Please choose a whole number between 1 and 100")
+};
+for (var startNum = input; startNum < 101; startNum++) {
+    if (startNum % 3 === 0 && startNum % 5 === 0) {
         console.log("fizzbuzz");
-    } else if (i % 3 === 0) {
+    } else if (startNum % 3 === 0) {
         console.log("fizz");
-    } else if (i % 5 === 0) {
+    } else if (startNum % 5 === 0) {
         console.log("buzz");
     } else {
-        console.log(i);
+        console.log(startNum);
     }
 }
